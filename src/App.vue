@@ -1,30 +1,50 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <div class="docker">
+        <span class="docker_item">
+            <div class="iconfont">&#xe625;</div>
+            首页
+        </span>
+        <span class="docker_item">
+            <div class="iconfont">&#xe63f;</div>
+            购物车
+        </span>
+        <span class="docker_item">
+            <div class="iconfont">&#xe897;</div>
+            订单
+        </span>
+        <span class="docker_item">
+            <div class="iconfont">&#xe62f;</div>
+            我的
+        </span>
+    </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+
 }
+</script>
 
-nav {
-  padding: 30px;
+<style lang="scss" scoped>
+.docker {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding:0 .18rem;
+    display: flex;
+    width: 100%;
+    height: 0.49rem;
+    border-top: 1px solid #f1f1f1;
+    // background-color: aqua;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+}
+.docker_item{
+    flex: 1;
+    text-align: center;
+    .iconfont{
+        margin: .07rem 0 .02rem 0;
+        font-size: .18rem;
     }
-  }
 }
 </style>
